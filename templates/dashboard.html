@@ -1,7 +1,51 @@
 {% extends 'base.html' %}
 {% block title %}Dashboard | GroMan{% endblock %}
 {% block content %}
-<h2>Dashboard</h2>
-<p>Welcome, {{ request.user.first_name }}!</p>
-<a href="{% url 'logout' %}" class="btn btn-danger">Logout</a>
+
+<h2 class="mb-4">Welcome, {{ request.user.first_name }}!</h2>
+
+<div class="row g-3">
+
+    <div class="col-md-3">
+        <div class="card text-center shadow-sm">
+            <div class="card-body">
+                <i class="bi bi-box-seam fs-1 text-primary"></i>
+                <h4 class="mt-2">120</h4>
+                <p class="text-muted">Products</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card text-center shadow-sm">
+            <div class="card-body">
+                <i class="bi bi-people fs-1 text-success"></i>
+                <h4 class="mt-2">45</h4>
+                <p class="text-muted">Customers</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card text-center shadow-sm">
+            <div class="card-body">
+                <i class="bi bi-cash-stack fs-1 text-warning"></i>
+                <h4 class="mt-2">$8,200</h4>
+                <p class="text-muted">Daily Sales</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card text-center shadow-sm">
+            <div class="card-body">
+                <i class="bi bi-exclamation-triangle fs-1 text-danger"></i>
+                <h4 class="mt-2">12</h4>
+                <p class="text-muted">Low Stock</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
 {% endblock %}
