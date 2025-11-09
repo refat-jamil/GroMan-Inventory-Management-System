@@ -1,0 +1,29 @@
+{% load static %}
+
+{% if request.user.is_authenticated %}
+<div class="sidebar">
+
+<div class="text-center p-3">
+    <img src="{% static 'img/GroMan.png' %}" alt="GroMan Logo" class="sidebar-logo">
+</div>
+
+
+    <a href="{% url 'dashboard' %}" class="{% if request.resolver_match.url_name == 'dashboard' %}active{% endif %}">
+        <i class="bi bi-speedometer2"></i> Dashboard
+    </a>
+    <a href="#">
+        <i class="bi bi-box-seam"></i> Products
+    </a>
+    <a href="#">
+        <i class="bi bi-people"></i> Customers
+    </a>
+    <a href="#">
+        <i class="bi bi-receipt"></i> Sales
+    </a>
+    
+    <a href="{% url 'logout' %}" class="text-danger">
+        <i class="bi bi-box-arrow-right"></i> Logout
+    </a>
+    
+</div>
+{% endif %}

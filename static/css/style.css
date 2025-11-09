@@ -1,0 +1,105 @@
+/* Global */
+body {
+    display: flex;
+    min-height: 100vh;
+    margin: 0;
+    background: #f8fafc;
+    font-family: "Inter", sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 230px;
+    background: #ffffff;
+    border-right: 1px solid #e6e9ef;
+    padding: 25px 0;
+}
+
+.sidebar-logo {
+    display: block;
+    width: 120px;
+    margin: 0 auto 25px auto;
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 22px;
+    margin: 6px 12px;
+    border-radius: 8px;
+    color: #4B5563;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.25s;
+}
+
+.sidebar a:hover {
+    background: #eef2ff;
+    color: #1e3a8a;
+}
+
+.sidebar a.active {
+    background: #dbeafe;
+    color: #1e3a8a;
+    font-weight: 600;
+}
+
+/* Logout */
+.sidebar a.text-danger {
+    margin-top: 40px;
+    color: #DC2626 !important;
+}
+.sidebar a.text-danger:hover {
+    background: #ffe4e6;
+}
+
+/* Main content */
+.content-area {
+    flex-grow: 1;
+    padding: 30px 35px;
+}
+
+/* Heading */
+.page-title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #111827;
+}
+
+/* Cards */
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.card-info {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 28px;
+    text-align: center;
+    border: 1px solid #e7e7e7;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.card-info:hover {
+    box-shadow: 0 6px 20px rgba(0,0,0,0.07);
+    transform: translateY(-2px);
+}
+
+/* Card numbers */
+.card-info h2 {
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+/* Specific colors */
+.blue-icon { color: #2563EB; }
+.green-icon { color: #059669; }
+.yellow-icon { color: #CA8A04; }
+.red-icon { color: #DC2626; }
+
+
