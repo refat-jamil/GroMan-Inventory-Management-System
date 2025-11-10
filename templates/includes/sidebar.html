@@ -11,6 +11,9 @@
     <a href="{% url 'dashboard' %}" class="{% if request.resolver_match.url_name == 'dashboard' %}active{% endif %}">
         <i class="bi bi-speedometer2"></i> Dashboard
     </a>
+    <a href="{% url 'profile' %}" class="{% if request.resolver_match.url_name == 'profile' %}active{% endif %}">
+        <i class="bi bi-person-circle"></i> Profile
+    </a>
     <a href="#">
         <i class="bi bi-box-seam"></i> Products
     </a>
